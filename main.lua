@@ -1,6 +1,8 @@
 
 require "menu"
 require "escapeMenu"
+require "game"
+
 -- constants
 WINDOW_WIDTH = 1920
 WINDOW_HEIGHT = 1080
@@ -28,11 +30,15 @@ function love.update(dt)
     if gameState == "menu" then
          buttonPressed()
     end
+    movement(dt)
 
 
 
 end
 
 function love.draw()
+    -- render menu
     rendermenu()
+    -- render game stuff
+    renderGame()
 end
