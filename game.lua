@@ -23,12 +23,24 @@ function renderGame()
     end
 end
 
--- need to add movement with DT accounted this is not currently finished
+-- not 100% sure if this is the right way to implement the dt with playermovement
+local speed = 500
 function movement(dt)
-    if love.keyboard.isDown("w") then
-        playerY = (playerY - 1)  
+    if love.keyboard.isDown("w") and gameState == "play" then
+        movedistance = speed *dt
+        playerY = playerY - movedistance
     end
-    if love.keyboard.isDown("s") then
-        playerY = (playerY + 1)
+    if love.keyboard.isDown("s") and gameState == "play" then
+        movedistance = speed *dt
+        playerY = playerY + movedistance
+    end
+    if love.keyboard.isDown("a") and gameState == "play" then
+        movedistance = speed *dt
+        playerX = playerX - movedistance
+    end
+    if love.keyboard.isDown("d") and gameState == "play" then
+        movedistance = speed *dt
+        playerX = playerX + movedistance
     end
 end
+
