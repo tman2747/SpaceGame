@@ -27,11 +27,12 @@ end
 
 function love.update(dt)
     -- main menu buttons checking for what button is clicekd
+    --debugPrintChar()
     if gameState == "menu" then
          buttonPressed()
     end
     movement(dt)
-
+    engineMenu()
 
 
 end
