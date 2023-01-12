@@ -18,7 +18,7 @@ function renderGame()
         love.graphics.draw(ship, 1000, 300, 1.5708)
 
         love.graphics.setColor(255/255,191/255,128/255,1)
-        love.graphics.rectangle("fill", playerX, playerY ,10,10)
+        love.graphics.rectangle("fill", playerX, playerY ,14,14)
         love.graphics.setBackgroundColor( BackgroundColor.red, BackgroundColor.green, BackgroundColor.blue, BackgroundColor.alpha)
         love.graphics.setColor(1,1,1,1)
 
@@ -50,12 +50,9 @@ function debugPrintChar()
     print("PlayerX: ", playerX, "playerY: ", playerY)
 end
 
--- top right 220 495
--- bottom right 220 690
--- 94 690
--- 94 495
 
-function engineMenu()
+-- maybe add this to a state machine so im not constantly drawing menu when the time comes?
+function engineBoundingBox()
     if playerX <= 220 and playerY >= 495 and playerX >= 94 and playerY <= 690 then
         print("show engine menu")
     end

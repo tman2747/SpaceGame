@@ -32,7 +32,7 @@ function love.update(dt)
          buttonPressed()
     end
     movement(dt)
-    engineMenu()
+    engineBoundingBox()
 
 
 end
