@@ -14,6 +14,7 @@ function love.load()
     love.window.setTitle("Sky Captian")
     love.mouse.setVisible(true)
     mainMenuFont = love.graphics.newFont("/fonts/spacetheme.ttf", 50)
+    subMenuFont = love.graphics.newFont("/fonts/spacetheme.ttf", 25)
     gameState = "menu"
     background = love.graphics.newImage("/images/spaceBackground.png")
     secondaryState = false

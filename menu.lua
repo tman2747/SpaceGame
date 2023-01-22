@@ -34,8 +34,16 @@ function buttonPressed()
     end
 end
 
+-- need to move setfont out of fuction so it isnt setting new font every frame
+
 function engineMenu(secondaryState)
-    if secondaryState == true then
-        love.graphics.rectangle("fill", (WINDOW_WIDTH / 2) - 150,(WINDOW_HEIGHT / 2) - 150, 300, 300)
+    if secondaryState then
+        love.mouse.setVisible(true) -- show the mouse
+        love.graphics.setColor(0, 0, 0, 0.8) -- set the color of the rectangle
+        love.graphics.setFont(subMenuFont)
+        love.graphics.rectangle("fill", (WINDOW_WIDTH / 2) - 300, (WINDOW_HEIGHT / 2) - 300, 600, 600) -- Draw the rectangle
+        love.graphics.setColor(1,1,1, 0.8) -- set the color of the text
+        love.graphics.print("Engine Menu", (WINDOW_WIDTH / 2) - 300, (WINDOW_HEIGHT / 2) - 300)
+        love.graphics.setColor( 1, 1, 1, 1) -- set the color back to its orginal so it doesnt draw everything weird
     end
 end

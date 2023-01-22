@@ -20,6 +20,7 @@ function renderGame()
         love.graphics.rectangle("fill", playerX, playerY ,14,14)
         love.graphics.setBackgroundColor( BackgroundColor.red, BackgroundColor.green, BackgroundColor.blue, BackgroundColor.alpha)
         love.graphics.setColor(1,1,1,1)
+        love.mouse.setVisible(false)
 
     end
 end
