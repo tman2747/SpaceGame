@@ -11,7 +11,7 @@ function love.load()
     love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT, {
         fullscreen=false
     })
-    love.window.setTitle("Sky Captian")
+    love.window.setTitle("Sky Captain")
     love.mouse.setVisible(true)
     mainMenuFont = love.graphics.newFont("/fonts/spacetheme.ttf", 50)
     subMenuFont = love.graphics.newFont("/fonts/spacetheme.ttf", 25)

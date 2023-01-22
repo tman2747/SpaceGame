@@ -6,7 +6,7 @@ MOVE_OVER_PIXEL = .8
 function rendermenu()
     if gameState == "menu" then
         love.graphics.setFont(mainMenuFont)
-        love.graphics.print("Sky Captain: Fecal Combat", (WINDOW_WIDTH * .5), 175,0)
+        love.graphics.print("Sky Captain: Space Combat", (WINDOW_WIDTH * .5), 175,0)
         love.graphics.print("Play", WINDOW_WIDTH * MOVE_OVER_PIXEL, 375)
         love.graphics.print("Settings", WINDOW_WIDTH * MOVE_OVER_PIXEL, 475)
         love.graphics.print("Quit", WINDOW_WIDTH * MOVE_OVER_PIXEL, 575)
