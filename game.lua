@@ -16,7 +16,6 @@ function renderGame()
     if gameState == "play" then
         ship = love.graphics.newImage("/images/ship.png")
         love.graphics.draw(ship, 1000, 300, 1.5708)
-
         love.graphics.setColor(255/255,191/255,128/255,1)
         love.graphics.rectangle("fill", playerX, playerY ,14,14)
         love.graphics.setBackgroundColor( BackgroundColor.red, BackgroundColor.green, BackgroundColor.blue, BackgroundColor.alpha)
@@ -54,6 +53,8 @@ end
 -- maybe add this to a state machine so im not constantly drawing menu when the time comes?
 function engineBoundingBox()
     if playerX <= 220 and playerY >= 495 and playerX >= 94 and playerY <= 690 then
-        print("show engine menu")
+        secondaryState = true
+    else
+        secondaryState = false
     end
 end

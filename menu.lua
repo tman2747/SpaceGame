@@ -33,3 +33,9 @@ function buttonPressed()
         end
     end
 end
+
+function engineMenu(secondaryState)
+    if secondaryState == true then
+        love.graphics.rectangle("fill", (WINDOW_WIDTH / 2) - 150,(WINDOW_HEIGHT / 2) - 150, 300, 300)
+    end
+end

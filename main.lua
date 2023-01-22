@@ -11,10 +11,12 @@ function love.load()
     love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT, {
         fullscreen=false
     })
-    love.window.setTitle("check")
+    love.window.setTitle("Sky Captian")
     love.mouse.setVisible(true)
     mainMenuFont = love.graphics.newFont("/fonts/spacetheme.ttf", 50)
     gameState = "menu"
+    background = love.graphics.newImage("/images/spaceBackground.png")
+    secondaryState = false
 end
 
 -- quit program with escape key FOR DEBUG ONLY
@@ -27,7 +29,7 @@ end
 
 function love.update(dt)
     -- main menu buttons checking for what button is clicekd
-    --debugPrintChar()
+    debugPrintChar()
     if gameState == "menu" then
          buttonPressed()
     end
@@ -41,5 +43,9 @@ function love.draw()
     -- render menu
     rendermenu()
     -- render game stuff
+    if gameState == "play" then
+        love.graphics.draw(background)
+    end
     renderGame()
+    engineMenu(secondaryState)
 end
