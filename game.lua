@@ -14,7 +14,6 @@ playerY = 1080/2
 
 function renderGame()
     if gameState == "play" then
-        ship = love.graphics.newImage("/images/ship.png")
         love.graphics.draw(ship, 1000, 300, 1.5708)
         love.graphics.setColor(255/255,191/255,128/255,1)
         love.graphics.rectangle("fill", playerX, playerY ,14,14)

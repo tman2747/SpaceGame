@@ -16,6 +16,7 @@ function love.load()
     mainMenuFont = love.graphics.newFont("/fonts/spacetheme.ttf", 50)
     subMenuFont = love.graphics.newFont("/fonts/spacetheme.ttf", 25)
     gameState = "menu"
+    ship = love.graphics.newImage("/images/ship.png")
     background = love.graphics.newImage("/images/spaceBackground.png")
     secondaryState = false
 end
