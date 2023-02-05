@@ -75,6 +75,7 @@ function electricMenu(electricMenuState)
         love.graphics.print("Power", buttonX + (buttonWidth / 2) - 50, buttonY + (buttonHeight / 2) - 15)
 
         -- Check if the mouse is clicking inside the button
+        -- Maybe need to add either a timer or a check release so it doesnt spam
         if love.mouse.isDown(1) and love.mouse.getX() >= buttonX and love.mouse.getX() <= buttonX + buttonWidth and love.mouse.getY() >= buttonY and love.mouse.getY() <= buttonY + buttonHeight then
             if buttonClicked == true then
                 buttonClicked = false
