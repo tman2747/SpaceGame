@@ -2,6 +2,7 @@
 require "menu"
 require "escapeMenu"
 require "game"
+require "player"
 
 -- constants
 WINDOW_WIDTH = 1920
@@ -19,6 +20,7 @@ function love.load()
     ship = love.graphics.newImage("/images/ship.png")
     background = love.graphics.newImage("/images/spaceBackground.png")
     secondaryState = false
+    electricMenuState = false
 end
 
 -- quit program with escape key FOR DEBUG ONLY
@@ -37,6 +39,7 @@ function love.update(dt)
     end
     movement(dt)
     engineBoundingBox()
+    electricBoundingBox()
 
 
 end
@@ -49,5 +52,7 @@ function love.draw()
         love.graphics.draw(background)
     end
     renderGame()
+    renderplayer()
     engineMenu(secondaryState)
+    electricMenu(electricMenuState)
 end
