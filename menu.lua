@@ -48,7 +48,7 @@ function engineMenu(secondaryState)
     end
 end
 
-buttonClicked = false
+local buttonClicked = false
 function electricMenu(electricMenuState)
     if electricMenuState == true then
         love.mouse.setVisible(true) -- show the mouse
