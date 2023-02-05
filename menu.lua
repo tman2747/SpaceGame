@@ -48,7 +48,7 @@ function engineMenu(secondaryState)
     end
 end
 
-
+buttonClicked = false
 function electricMenu(electricMenuState)
     if electricMenuState == true then
         love.mouse.setVisible(true) -- show the mouse
@@ -64,15 +64,23 @@ function electricMenu(electricMenuState)
         local buttonWidth = 400
         local buttonHeight = 50
 
-        love.graphics.setColor(0.5, 0.5, 0.5, 1) -- set the color of the button
+        -- Check the state of the button
+        if buttonClicked then
+            love.graphics.setColor(1, 0, 0, 1) -- set the color of the button to red
+        else
+            love.graphics.setColor(0, 1, 0, 1) -- set the color of the button to gray
+        end
         love.graphics.rectangle("fill", buttonX, buttonY, buttonWidth, buttonHeight)
         love.graphics.setColor(1, 1, 1, 1) -- set the color of the text
-        love.graphics.print("Button", buttonX + (buttonWidth / 2) - 50, buttonY + (buttonHeight / 2) - 15)
+        love.graphics.print("Power", buttonX + (buttonWidth / 2) - 50, buttonY + (buttonHeight / 2) - 15)
 
         -- Check if the mouse is clicking inside the button
         if love.mouse.isDown(1) and love.mouse.getX() >= buttonX and love.mouse.getX() <= buttonX + buttonWidth and love.mouse.getY() >= buttonY and love.mouse.getY() <= buttonY + buttonHeight then
-            -- Perform desired action here
-            love.event.quit()
+            if buttonClicked == true then
+                buttonClicked = false
+            else
+                buttonClicked = true
+            end
         end
 
         love.graphics.setColor( 1, 1, 1, 1) -- set the color back to its original so it doesn't draw everything weird
