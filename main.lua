@@ -33,7 +33,7 @@ end
 
 function love.update(dt)
     -- main menu buttons checking for what button is clicekd
-    debugPrintChar()
+    --debugPrintChar()
     if gameState == "menu" then
          buttonPressed()
     end
@@ -43,6 +43,8 @@ function love.update(dt)
 
 
 end
+
+
 
 function love.draw()
     -- render menu
